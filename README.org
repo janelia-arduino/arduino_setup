@@ -1,0 +1,13 @@
+#+TITLE: arduino_setup
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
+
+* Repository Information
+  - Author :: Peter Polidoro
+  - License :: BSD
+
+  [[./ARDUINO_SETUP_LINUX.md][Setup Arduino for Linux]]
+
+  [[./ARDUINO_SETUP_MAC_OS_X.md][Setup Arduino for Mac OS X]]
+
+  [[./ARDUINO_SETUP_WINDOWS.md][Setup Arduino for Windows]]
