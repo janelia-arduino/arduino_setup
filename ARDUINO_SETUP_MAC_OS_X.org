@@ -6,25 +6,27 @@
   - Author :: Peter Polidoro
   - License :: BSD
 
-* Install the Arduino IDE
-** Download
+* Run
+* Install
+** Install the Arduino IDE
+*** Download
 
    [[http://arduino.cc/en/main/software]]
 
-** Install
+*** Install
 
    [[https://www.arduino.cc/en/Guide/MacOSX]]
 
-** Setup
+*** Setup
 
    #+BEGIN_SRC sh
-# after Arduino starts, go to File : Preferences
-# verify Sketchbook location:
-# /home/<yourusername>/Arduino/
+     # after Arduino starts, go to File : Preferences
+     # verify Sketchbook location:
+     # /home/<yourusername>/Arduino/
    #+END_SRC
 
-* Install Teensyduino
-** Run Arduino Once
+** Install Teensyduino
+*** Run Arduino Once
 
    You must run Arduino at least once before adding Teensyduino, to confirm you
    wish to run a program downloaded from the Internet.
@@ -34,8 +36,8 @@
    your computer. Simply run Arduino first to clear the question about running a
    program downloaded from the Internet, before adding Teensyduino!
 
-** Download
+*** Download
 
    [[https://www.pjrc.com/teensy/td_download.html]]
 
-** Run Installer
+*** Run Installer

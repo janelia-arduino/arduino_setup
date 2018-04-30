@@ -6,25 +6,27 @@
   - Author :: Peter Polidoro
   - License :: BSD
 
-* Install the Arduino IDE
-** Download
+* Run
+* Install
+** Install the Arduino IDE
+*** Download
 
    [[http://arduino.cc/en/main/software]]
 
-** Install
+*** Install
 
    [[https://www.arduino.cc/en/Guide/Windows]]
 
-** Setup
+*** Setup
 
    #+BEGIN_SRC sh
-# after Arduino starts, go to File : Preferences
-# verify Sketchbook location:
+     # after Arduino starts, go to File : Preferences
+     # verify Sketchbook location:
    #+END_SRC
 
-* Install Teensyduino
-** Download
+** Install Teensyduino
+*** Download
 
    [[https://www.pjrc.com/teensy/td_download.html]]
 
-** Run Installer
+*** Run Installer
