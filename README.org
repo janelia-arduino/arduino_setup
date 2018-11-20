@@ -6,8 +6,14 @@
   - Author :: Peter Polidoro
   - License :: BSD
 
-  [[./ARDUINO_SETUP_LINUX.org][Setup Arduino for Linux]]
+** Linux
 
-  [[./ARDUINO_SETUP_MAC_OS_X.org][Setup Arduino for Mac OS X]]
+   [[https://github.com/janelia-arduino/arduino_setup/blob/master/ARDUINO_SETUP_LINUX.org]]
 
-  [[./ARDUINO_SETUP_WINDOWS.org][Setup Arduino for Windows]]
+** Mac OS X
+
+   [[https://github.com/janelia-arduino/arduino_setup/blob/master/ARDUINO_SETUP_MAC_OS_X.org]]
+
+** Windows
+
+   [[https://github.com/janelia-arduino/arduino_setup/blob/master/ARDUINO_SETUP_WINDOWS.org]]
