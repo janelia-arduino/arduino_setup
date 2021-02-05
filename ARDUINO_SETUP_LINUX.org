@@ -13,7 +13,9 @@
   #+END_SRC
 
 * Install
+
 ** Install the Arduino IDE
+
 *** Download
 
     [[http://arduino.cc/en/main/software]]
@@ -21,40 +23,46 @@
 *** Install
 
     #+BEGIN_SRC sh
-      sudo apt-get remove arduino # remove older version if necessary
+
+      sudo apt remove arduino # remove older version if necessary
       rm -rf ~/ArduinoIde
       mkdir ~/ArduinoIde
       mv ~/Downloads/arduino-*.*.*-linux*.tar.xz ~/ArduinoIde/
       cd ~/ArduinoIde/
       tar -xf arduino-*.*.*-linux*.tar.xz
       cd arduino-*.*.*/
-      # bash shell
       sed -i '/^alias arduino=/d' ~/.bashrc
       echo "alias arduino='$(pwd)/arduino'" >> ~/.bashrc
       source ~/.bashrc
-      # fish shell
-      sed -i '/^alias arduino=/d' ~/.config/fish/config.fish
-      echo "alias arduino=$PWD/arduino" >> ~/.config/fish/config.fish
-      source ~/.config/fish/config.fish
+
     #+END_SRC
 
     You may need to add yourself to the group 'dialout' in order to have write
     permissions on the USB port:
 
     #+BEGIN_SRC sh
+
       sudo usermod -aG dialout $USER
       sudo reboot
+
     #+END_SRC
 
 *** Setup
 
     #+BEGIN_SRC sh
-      # after Arduino starts, go to File : Preferences
-      # verify Sketchbook location:
-      # /home/<yourusername>/Arduino/
+
+      mkdir -p ~/Arduino/libraries/
+      cd ~/path/to/your/arduino/libraries
+      sudo apt install stow
+      stow -vRt ~/Arduino/libraries/ .
+			# after Arduino starts, go to File : Preferences
+			# verify Sketchbook location:
+			# /home/<yourusername>/Arduino/
+
     #+END_SRC
 
 ** Install Teensyduino
+
 *** Download
 
     [[https://www.pjrc.com/teensy/td_download.html]]
@@ -62,15 +70,18 @@
 *** Run Installer
 
     #+BEGIN_SRC sh
+
       mv ~/Downloads/TeensyduinoInstall.linux64 ~/ArduinoIde/
       cd ~/ArduinoIde/
       chmod 755 TeensyduinoInstall.linux64
       ./TeensyduinoInstall.linux64
       #select folder ~/ArduinoIde/arduino-X.Y.Z/
       #select 'None' additional libraries to install
+
     #+END_SRC
 
 *** Setup udev Rules
+
 **** Download
 
      [[https://www.pjrc.com/teensy/td_download.html]]
@@ -82,5 +93,7 @@
 **** Copy to udev
 
      #+BEGIN_SRC sh
+
        sudo cp ~/Downloads/49-teensy.rules /etc/udev/rules.d/
+
      #+END_SRC
