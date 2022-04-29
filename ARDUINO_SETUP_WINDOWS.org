@@ -3,30 +3,36 @@
 #+EMAIL: peter@polidoro.io
 
 * Repository Information
-  - Author :: Peter Polidoro
-  - License :: BSD
+- Author :: Peter Polidoro
+- License :: BSD
 
 * Run
+
 * Install
+
 ** Install the Arduino IDE
+
 *** Download
 
-   [[http://arduino.cc/en/main/software]]
+[[https://www.arduino.cc/en/software]]
 
 *** Install
 
-   [[https://www.arduino.cc/en/Guide/Windows]]
+[[https://www.arduino.cc/en/Guide/Windows]]
 
 *** Setup
 
-   #+BEGIN_SRC sh
-     # after Arduino starts, go to File : Preferences
-     # verify Sketchbook location:
-   #+END_SRC
+#+BEGIN_SRC sh
+
+# after Arduino starts, go to File : Preferences
+# verify Sketchbook location:
+
+#+END_SRC
 
 ** Install Teensyduino
+
 *** Download
 
-   [[https://www.pjrc.com/teensy/td_download.html]]
+[[https://www.pjrc.com/teensy/td_download.html]]
 
 *** Run Installer

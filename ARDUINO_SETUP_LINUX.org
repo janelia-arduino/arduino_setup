@@ -3,14 +3,16 @@
 #+EMAIL: peter@polidoro.io
 
 * Repository Information
-  - Author :: Peter Polidoro
-  - License :: BSD
+- Author :: Peter Polidoro
+- License :: BSD
 
 * Run
 
-  #+BEGIN_SRC sh
-    arduino
-  #+END_SRC
+#+BEGIN_SRC sh
+
+arduino
+
+#+END_SRC
 
 * Install
 
@@ -18,82 +20,82 @@
 
 *** Download
 
-    [[http://arduino.cc/en/main/software]]
+[[https://www.arduino.cc/en/softwar]]
 
 *** Install
 
-    #+BEGIN_SRC sh
+#+BEGIN_SRC sh
 
-      sudo apt remove arduino # remove older version if necessary
-      rm -rf ~/ArduinoIde
-      mkdir ~/ArduinoIde
-      mv ~/Downloads/arduino-*.*.*-linux*.tar.xz ~/ArduinoIde/
-      cd ~/ArduinoIde/
-      tar -xf arduino-*.*.*-linux*.tar.xz
-      cd arduino-*.*.*/
-      sed -i '/^alias arduino=/d' ~/.bashrc
-      echo "alias arduino='$(pwd)/arduino'" >> ~/.bashrc
-      source ~/.bashrc
+sudo apt remove arduino # remove older version if necessary
+rm -rf ~/ArduinoIde
+mkdir ~/ArduinoIde
+mv ~/Downloads/arduino-*.*.*-linux*.tar.xz ~/ArduinoIde/
+cd ~/ArduinoIde/
+tar -xf arduino-*.*.*-linux*.tar.xz
+cd arduino-*.*.*/
+sed -i '/^alias arduino=/d' ~/.bashrc
+echo "alias arduino='$(pwd)/arduino'" >> ~/.bashrc
+source ~/.bashrc
 
-    #+END_SRC
+#+END_SRC
 
-    You may need to add yourself to the group 'dialout' in order to have write
-    permissions on the USB port:
+You may need to add yourself to the group 'dialout' in order to have write
+permissions on the USB port:
 
-    #+BEGIN_SRC sh
+#+BEGIN_SRC sh
 
-      sudo usermod -aG dialout $USER
-      sudo reboot
+sudo usermod -aG dialout $USER
+sudo reboot
 
-    #+END_SRC
+#+END_SRC
 
 *** Setup
 
-    #+BEGIN_SRC sh
+#+BEGIN_SRC sh
 
-      mkdir -p ~/Arduino/libraries/
-      cd ~/path/to/your/arduino/libraries
-      sudo apt install stow
-      stow -vRt ~/Arduino/libraries/ .
-			# after Arduino starts, go to File : Preferences
-			# verify Sketchbook location:
-			# /home/<yourusername>/Arduino/
+mkdir -p ~/Arduino/libraries/
+cd ~/path/to/your/arduino/libraries
+sudo apt install stow
+stow -vRt ~/Arduino/libraries/ .
+# after Arduino starts, go to File : Preferences
+# verify Sketchbook location:
+# /home/<yourusername>/Arduino/
 
-    #+END_SRC
+#+END_SRC
 
 ** Install Teensyduino
 
 *** Download
 
-    [[https://www.pjrc.com/teensy/td_download.html]]
+[[https://www.pjrc.com/teensy/td_download.html]]
 
 *** Run Installer
 
-    #+BEGIN_SRC sh
+#+BEGIN_SRC sh
 
-      mv ~/Downloads/TeensyduinoInstall.linux64 ~/ArduinoIde/
-      cd ~/ArduinoIde/
-      chmod 755 TeensyduinoInstall.linux64
-      ./TeensyduinoInstall.linux64
-      #select folder ~/ArduinoIde/arduino-X.Y.Z/
-      #select 'None' additional libraries to install
+mv ~/Downloads/TeensyduinoInstall.linux64 ~/ArduinoIde/
+cd ~/ArduinoIde/
+chmod 755 TeensyduinoInstall.linux64
+./TeensyduinoInstall.linux64
+#select folder ~/ArduinoIde/arduino-X.Y.Z/
+#select 'None' additional libraries to install
 
-    #+END_SRC
+#+END_SRC
 
 *** Setup udev Rules
 
 **** Download
 
-     [[https://www.pjrc.com/teensy/td_download.html]]
+[[https://www.pjrc.com/teensy/td_download.html]]
 
-     Right-click 'Linux udev rules'
+Right-click 'Linux udev rules'
 
-     Save Link As...
+Save Link As...
 
 **** Copy to udev
 
-     #+BEGIN_SRC sh
+#+BEGIN_SRC sh
 
-       sudo cp ~/Downloads/49-teensy.rules /etc/udev/rules.d/
+sudo cp ~/Downloads/49-teensy.rules /etc/udev/rules.d/
 
-     #+END_SRC
+#+END_SRC
